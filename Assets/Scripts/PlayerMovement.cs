@@ -1,35 +1,24 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using DG.Tweening;
+﻿using System;
 using Cinemachine;
+using DG.Tweening;
+using UnityEngine;
 using UnityEngine.Rendering.PostProcessing;
 
 public class PlayerMovement : MonoBehaviour
 {
     private Transform playerModel;
 
-    [Header("Settings")]
-    public bool joystick = true;
+    [Header("Settings")] public bool joystick = true;
 
-    [Space]
-
-    [Header("Parameters")]
-    public float xySpeed = 18;
+    [Space] [Header("Parameters")] public float xySpeed = 18;
     public float lookSpeed = 340;
     public float forwardSpeed = 6;
 
-    [Space]
-
-    [Header("Public References")]
-    public Transform aimTarget;
+    [Space] [Header("Public References")] public Transform aimTarget;
     public CinemachineDollyCart dolly;
     public Transform cameraParent;
 
-    [Space]
-
-    [Header("Particles")]
-    public ParticleSystem trail;
+    [Space] [Header("Particles")] public ParticleSystem trail;
     public ParticleSystem circle;
     public ParticleSystem barrel;
     public ParticleSystem stars;
@@ -44,9 +33,9 @@ public class PlayerMovement : MonoBehaviour
     {
         float h = joystick ? Input.GetAxis("Horizontal") : Input.GetAxis("Mouse X");
         float v = joystick ? Input.GetAxis("Vertical") : Input.GetAxis("Mouse Y");
-
+        ProcessCollision(ref h, ref v);
         LocalMove(h, v, xySpeed);
-        RotationLook(h,v, lookSpeed);
+        RotationLook(h, v, lookSpeed);
         HorizontalLean(playerModel, h, 80, .1f);
 
         if (Input.GetButtonDown("Action"))
@@ -66,14 +55,12 @@ public class PlayerMovement : MonoBehaviour
             int dir = Input.GetButtonDown("TriggerL") ? -1 : 1;
             QuickSpin(dir);
         }
-
-
     }
 
     void LocalMove(float x, float y, float speed)
     {
         transform.localPosition += new Vector3(x, y, 0) * speed * Time.deltaTime;
-        ClampPosition();
+        // ClampPosition();
     }
 
     void ClampPosition()
@@ -88,13 +75,15 @@ public class PlayerMovement : MonoBehaviour
     {
         aimTarget.parent.position = Vector3.zero;
         aimTarget.localPosition = new Vector3(h, v, 1);
-        transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(aimTarget.position), Mathf.Deg2Rad * speed * Time.deltaTime);
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(aimTarget.position),
+            Mathf.Deg2Rad * speed * Time.deltaTime);
     }
 
     void HorizontalLean(Transform target, float axis, float leanLimit, float lerpTime)
     {
         Vector3 targetEulerAngels = target.localEulerAngles;
-        target.localEulerAngles = new Vector3(targetEulerAngels.x, targetEulerAngels.y, Mathf.LerpAngle(targetEulerAngels.z, -axis * leanLimit, lerpTime));
+        target.localEulerAngles = new Vector3(targetEulerAngels.x, targetEulerAngels.y,
+            Mathf.LerpAngle(targetEulerAngels.z, -axis * leanLimit, lerpTime));
     }
 
     private void OnDrawGizmos()
@@ -102,14 +91,15 @@ public class PlayerMovement : MonoBehaviour
         Gizmos.color = Color.blue;
         Gizmos.DrawWireSphere(aimTarget.position, .5f);
         Gizmos.DrawSphere(aimTarget.position, .15f);
-
     }
 
     public void QuickSpin(int dir)
     {
         if (!DOTween.IsTweening(playerModel))
         {
-            playerModel.DOLocalRotate(new Vector3(playerModel.localEulerAngles.x, playerModel.localEulerAngles.y, 360 * -dir), .4f, RotateMode.LocalAxisAdd).SetEase(Ease.OutSine);
+            playerModel.DOLocalRotate(
+                new Vector3(playerModel.localEulerAngles.x, playerModel.localEulerAngles.y, 360 * -dir), .4f,
+                RotateMode.LocalAxisAdd).SetEase(Ease.OutSine);
             barrel.Play();
         }
     }
@@ -142,7 +132,6 @@ public class PlayerMovement : MonoBehaviour
 
     void Boost(bool state)
     {
-
         if (state)
         {
             cameraParent.GetComponentInChildren<CinemachineImpulseSource>().GenerateImpulse();
@@ -154,6 +143,7 @@ public class PlayerMovement : MonoBehaviour
             trail.Stop();
             circle.Stop();
         }
+
         trail.GetComponent<TrailRenderer>().emitting = state;
 
         float origFov = state ? 40 : 55;
@@ -184,4 +174,40 @@ public class PlayerMovement : MonoBehaviour
         DOVirtual.Float(dolly.m_Speed, speed, .15f, SetSpeed);
         SetCameraZoom(zoom, .4f);
     }
+
+    #region collision
+
+    public float maxReboundDuration = 0.1f;
+    public float reboundVelocityFacter = 2;
+    public Collider collider;
+    private Vector3 _relativeVelocity;
+    private float _duration;
+
+
+    private void OnTriggerEnter(Collider other)
+    {
+        // if (!(_duration < 0)) return;
+        Physics.ComputePenetration(collider, collider.transform.position, Quaternion.identity, other,
+            other.transform.position, Quaternion.identity, out var resolutionDirection, out var resolutionDistance);
+        //
+        // var position = transform.position;
+        // var closestPoint = other.ClosestPointOnBounds(position);
+        _relativeVelocity = resolutionDirection * resolutionDistance * reboundVelocityFacter;
+        _duration = maxReboundDuration;
+    }
+
+    private void ProcessCollision(ref float h, ref float v)
+    {
+        _duration -= Time.deltaTime;
+        if (!(_duration > 0)) return;
+        if (Camera.main != null)
+        {
+            var vector3 = Vector3.ProjectOnPlane(_relativeVelocity, Camera.main.transform.forward);
+                          // var vector3 = Camera.main.ViewportToScreenPoint(_relativeVelocity);
+            h = vector3.x;
+            v = vector3.y;
+        }
+    }
+
+    #endregion
 }
