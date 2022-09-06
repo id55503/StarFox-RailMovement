@@ -3,7 +3,52 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - DeathGround
+  - Mask_AlphaObject
+  - Mask_Custom
+  - Enemy
+  - Obstacle
+  - mp
+  - UI_Configuration
+  - ground_water
+  - ground_fire
+  - Room
+  - City
+  - Aisle
+  - pedestrian
+  - car
+  - monster
+  - boss
+  - normalMonster
+  - ladderTopOut
+  - CarHead
+  - Sewer
+  - ladder
+  - collisionJumpPlayer
+  - GameSceneGlobal
+  - Rewired
+  - ignoreMonsterCollision
+  - DirectionalLight
+  - EjectorTrigger
+  - AudioPre
+  - Flesh
+  - Metal
+  - climbWall
+  - CutBullet
+  - Bone
+  - Shell
+  - Mask_AlphaObjectInside
+  - MaskPlayer
+  - metal
+  - CustomOccluder
+  - CDPlayer
+  - Back
+  - Ground
+  - Building
+  - MultiSpineAnimation
+  - Shield
+  - Bullet
   layers:
   - Default
   - TransparentFX
@@ -13,31 +58,49 @@ TagManager:
   - UI
   - 
   - 
-  - Post
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - PostProcessing
+  - Scene_Ground
+  - Character
+  - Collider
+  - Trigger
+  - 3DUI
+  - Scene_Wall
+  - attack
+  - Minimap
+  - ColliderMonster
+  - IgnoreCharacter
+  - MonsterWall
+  - MsgLayer
+  - MapCollider
+  - AirWall
+  - CharacterMonster
+  - hurt
+  - physicsIgnoreMonster
+  - PlayerWall
+  - ShadowEffect
+  - JumpPlatform
+  - PhyObj
+  - CatchBox
+  - TriggerCollider
   m_SortingLayers:
+  - name: Pedestrian
+    uniqueID: 1576358431
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Cursor
+    uniqueID: 673612507
+    locked: 0
+  - name: Building
+    uniqueID: 1474911765
+    locked: 0
+  - name: MediumObj
+    uniqueID: 1211211899
+    locked: 0
+  - name: LittleObj
+    uniqueID: 1112589965
+    locked: 0
+  - name: Ground
+    uniqueID: 26236039
     locked: 0

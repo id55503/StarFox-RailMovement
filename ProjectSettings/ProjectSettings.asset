@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 20
-  productGUID: 3e661adef9c19914d918e465d0a39cf8
+  productGUID: 0cf32557ba4cb3a429fb08515fe518f1
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -12,17 +12,17 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
-  productName: mixandjam-starfoxrail
+  companyName: ThinkingStars
+  productName: 'ANNO: Mutationem'
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
-  m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
+  m_SplashScreenBackgroundColor: {r: 0, g: 0, b: 0, a: 1}
   m_ShowUnitySplashScreen: 1
   m_ShowUnitySplashLogo: 1
   m_SplashScreenOverlayOpacity: 1
   m_SplashScreenAnimation: 1
   m_SplashScreenLogoStyle: 1
-  m_SplashScreenDrawMode: 0
+  m_SplashScreenDrawMode: 1
   m_SplashScreenBackgroundAnimationZoom: 1
   m_SplashScreenLogoAnimationZoom: 1
   m_SplashScreenBackgroundLandscapeAspect: 1
@@ -39,7 +39,15 @@ PlayerSettings:
     y: 0
     width: 1
     height: 1
-  m_SplashScreenLogos: []
+  m_SplashScreenLogos:
+  - logo: {fileID: 10404, guid: 0000000000000000e000000000000000, type: 0}
+    duration: 2
+  - logo: {fileID: 21300000, guid: 7a3c056d1d44e3649892d9508a43c027, type: 3}
+    duration: 3
+  - logo: {fileID: 21300000, guid: 93e1fdc24c47def44bce0646e180e861, type: 3}
+    duration: 3
+  - logo: {fileID: 21300000, guid: cfb430f94b9580041b202e5acb9bf0a2, type: 3}
+    duration: 3
   m_VirtualRealitySplashScreen: {fileID: 0}
   m_HolographicTrackingLossScreen: {fileID: 0}
   defaultScreenWidth: 1024
@@ -47,7 +55,7 @@ PlayerSettings:
   defaultScreenWidthWeb: 960
   defaultScreenHeightWeb: 600
   m_StereoRenderingPath: 0
-  m_ActiveColorSpace: 0
+  m_ActiveColorSpace: 1
   m_MTRendering: 1
   m_StackTraceTypes: 010000000100000001000000010000000100000001000000
   iosShowActivityIndicatorOnLoading: -1
@@ -63,7 +71,7 @@ PlayerSettings:
   preserveFramebufferAlpha: 0
   disableDepthAndStencilBuffers: 0
   androidStartInFullscreen: 1
-  androidRenderOutsideSafeArea: 1
+  androidRenderOutsideSafeArea: 0
   androidUseSwappy: 0
   androidBlitType: 0
   androidResizableWindow: 0
@@ -89,7 +97,7 @@ PlayerSettings:
   resizableWindow: 0
   useMacAppStoreValidation: 0
   macAppStoreCategory: public.app-category.games
-  gpuSkinning: 1
+  gpuSkinning: 0
   xboxPIXTextureCapture: 0
   xboxEnableAvatar: 0
   xboxEnableKinect: 0
@@ -130,13 +138,13 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  bundleVersion: 0.1
+  bundleVersion: 1.05.00
   preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
-  xboxOneDisableKinectGpuReservation: 1
-  xboxOneEnable7thCore: 1
+  xboxOneDisableKinectGpuReservation: 0
+  xboxOneEnable7thCore: 0
   vrSettings:
     cardboard:
       depthFormat: 0
@@ -150,7 +158,7 @@ PlayerSettings:
       maximumSupportedHeadTracking: 1
     hololens:
       depthFormat: 1
-      depthBufferSharingEnabled: 1
+      depthBufferSharingEnabled: 0
     lumin:
       depthFormat: 0
       frameTiming: 2
@@ -158,11 +166,11 @@ PlayerSettings:
       glCacheMaxBlobSize: 524288
       glCacheMaxFileSize: 8388608
     oculus:
-      sharedDepthBuffer: 1
-      dashSupport: 1
+      sharedDepthBuffer: 0
+      dashSupport: 0
       lowOverheadMode: 0
       protectedContext: 0
-      v2Signing: 1
+      v2Signing: 0
     enable360StereoCapture: 0
   isWsaHolographicRemotingEnabled: 0
   enableFrameTimingStats: 0
@@ -179,7 +187,7 @@ PlayerSettings:
   AndroidMinSdkVersion: 19
   AndroidTargetSdkVersion: 0
   AndroidPreferredInstallLocation: 1
-  aotOptions: 
+  aotOptions: nrgctx-trampolines=8096,nimt-trampolines=8096,ntrampolines=4048
   stripEngineCode: 1
   iPhoneStrippingLevel: 0
   iPhoneScriptCallOptimization: 0
@@ -248,16 +256,16 @@ PlayerSettings:
   iOSAutomaticallyDetectAndAddCapabilities: 1
   appleEnableProMotion: 0
   clonedFromGUID: c0afd0d1d80e3634a9dac47e8a0426ea
-  templatePackageId: com.unity.template.3d@2.3.3
+  templatePackageId: com.unity.3d@1.0.2
   templateDefaultScene: Assets/Scenes/SampleScene.unity
-  AndroidTargetArchitectures: 1
+  AndroidTargetArchitectures: 5
   AndroidTargetDevices: 0
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: '{inproject}: '
+  AndroidKeystoreName: 
   AndroidKeyaliasName: 
   AndroidBuildApkPerCpuArchitecture: 0
-  AndroidTVCompatibility: 0
+  AndroidTVCompatibility: 1
   AndroidIsGame: 1
   AndroidEnableTango: 0
   androidEnableBanner: 1
@@ -271,12 +279,26 @@ PlayerSettings:
   chromeosInputEmulation: 1
   AndroidValidateAppBundleSize: 1
   AndroidAppBundleSizeToValidate: 150
-  m_BuildTargetIcons: []
+  m_BuildTargetIcons:
+  - m_BuildTarget: PS4
+    m_Icons:
+    - serializedVersion: 2
+      m_Icon: {fileID: 2800000, guid: 56a1c15893933b648bd098fd333d9ed4, type: 3}
+      m_Width: 512
+      m_Height: 512
+      m_Kind: 0
+  - m_BuildTarget: 
+    m_Icons:
+    - serializedVersion: 2
+      m_Icon: {fileID: 2800000, guid: 63b6576d90d547245b251a0d0d5e8636, type: 3}
+      m_Width: 128
+      m_Height: 128
+      m_Kind: 0
   m_BuildTargetPlatformIcons: []
   m_BuildTargetBatching:
   - m_BuildTarget: Standalone
     m_StaticBatching: 1
-    m_DynamicBatching: 0
+    m_DynamicBatching: 1
   - m_BuildTarget: tvOS
     m_StaticBatching: 1
     m_DynamicBatching: 0
@@ -289,14 +311,15 @@ PlayerSettings:
   - m_BuildTarget: WebGL
     m_StaticBatching: 0
     m_DynamicBatching: 0
+  - m_BuildTarget: PS4
+    m_StaticBatching: 1
+    m_DynamicBatching: 1
   m_BuildTargetGraphicsJobs:
   - m_BuildTarget: MacStandaloneSupport
     m_GraphicsJobs: 0
   - m_BuildTarget: Switch
-    m_GraphicsJobs: 0
+    m_GraphicsJobs: 1
   - m_BuildTarget: MetroSupport
-    m_GraphicsJobs: 0
-  - m_BuildTarget: GameCoreScarlettSupport
     m_GraphicsJobs: 0
   - m_BuildTarget: AppleTVSupport
     m_GraphicsJobs: 0
@@ -304,21 +327,15 @@ PlayerSettings:
     m_GraphicsJobs: 0
   - m_BuildTarget: LinuxStandaloneSupport
     m_GraphicsJobs: 0
-  - m_BuildTarget: GameCoreXboxOneSupport
-    m_GraphicsJobs: 0
   - m_BuildTarget: PS4Player
-    m_GraphicsJobs: 0
+    m_GraphicsJobs: 1
   - m_BuildTarget: iOSSupport
     m_GraphicsJobs: 0
-  - m_BuildTarget: PS5Player
-    m_GraphicsJobs: 0
   - m_BuildTarget: WindowsStandaloneSupport
-    m_GraphicsJobs: 0
+    m_GraphicsJobs: 1
   - m_BuildTarget: XboxOnePlayer
     m_GraphicsJobs: 0
   - m_BuildTarget: LuminSupport
-    m_GraphicsJobs: 0
-  - m_BuildTarget: CloudRendering
     m_GraphicsJobs: 0
   - m_BuildTarget: AndroidPlayer
     m_GraphicsJobs: 0
@@ -331,8 +348,8 @@ PlayerSettings:
     m_GraphicsJobMode: 0
   m_BuildTargetGraphicsAPIs:
   - m_BuildTarget: AndroidPlayer
-    m_APIs: 150000000b000000
-    m_Automatic: 0
+    m_APIs: 0b00000015000000
+    m_Automatic: 1
   - m_BuildTarget: iOSSupport
     m_APIs: 10000000
     m_Automatic: 1
@@ -341,6 +358,12 @@ PlayerSettings:
     m_Automatic: 0
   - m_BuildTarget: WebGLSupport
     m_APIs: 0b000000
+    m_Automatic: 1
+  - m_BuildTarget: WindowsStandaloneSupport
+    m_APIs: 0200000015000000
+    m_Automatic: 0
+  - m_BuildTarget: LinuxStandaloneSupport
+    m_APIs: 1100000015000000
     m_Automatic: 1
   m_BuildTargetVRSettings:
   - m_BuildTarget: Standalone
@@ -356,8 +379,13 @@ PlayerSettings:
     Android: 1
     iPhone: 1
     tvOS: 1
-  m_BuildTargetGroupLightmapEncodingQuality: []
-  m_BuildTargetGroupLightmapSettings: []
+  m_BuildTargetGroupLightmapEncodingQuality:
+  - m_BuildTarget: Standalone
+    m_EncodingQuality: 2
+  m_BuildTargetGroupLightmapSettings:
+  - m_BuildTarget: PS4
+    m_TextureStreamingEnabled: 1
+    m_TextureStreamingPriority: 0
   playModeTestRunnerEnabled: 0
   runPlayModeTestAsEditModeTest: 0
   actionOnDotNetUnhandledException: 1
@@ -371,44 +399,44 @@ PlayerSettings:
   switchSocketMemoryPoolSize: 6144
   switchSocketAllocatorPoolSize: 128
   switchSocketConcurrencyLimit: 14
-  switchScreenResolutionBehavior: 2
+  switchScreenResolutionBehavior: 0
   switchUseCPUProfiler: 0
-  switchApplicationID: 0x01004b9000490000
+  switchApplicationID: 0x0100846018258000
   switchNSODependencies: 
-  switchTitleNames_0: 
-  switchTitleNames_1: 
-  switchTitleNames_2: 
-  switchTitleNames_3: 
+  switchTitleNames_0: 'Anno: Mutationem'
+  switchTitleNames_1: 'Anno: Mutationem'
+  switchTitleNames_2: 'Anno: Mutationem'
+  switchTitleNames_3: 'Anno: Mutationem'
   switchTitleNames_4: 
   switchTitleNames_5: 
-  switchTitleNames_6: 
+  switchTitleNames_6: 'Anno: Mutationem'
   switchTitleNames_7: 
   switchTitleNames_8: 
   switchTitleNames_9: 
   switchTitleNames_10: 
-  switchTitleNames_11: 
-  switchTitleNames_12: 
-  switchTitleNames_13: 
-  switchTitleNames_14: 
-  switchTitleNames_15: 
-  switchPublisherNames_0: 
-  switchPublisherNames_1: 
-  switchPublisherNames_2: 
-  switchPublisherNames_3: 
+  switchTitleNames_11: 'Anno: Mutationem'
+  switchTitleNames_12: "\u7EAA\u5143\uFF1A\u53D8\u5F02"
+  switchTitleNames_13: "\u7D00\u5143\uFF1A\u8B8A\u7570"
+  switchTitleNames_14: "\uAE30\uC6D0: \uBCC0\uC774"
+  switchTitleNames_15: 'Anno: Mutationem'
+  switchPublisherNames_0: Lightning Games
+  switchPublisherNames_1: Lightning Games
+  switchPublisherNames_2: Lightning Games
+  switchPublisherNames_3: Lightning Games
   switchPublisherNames_4: 
   switchPublisherNames_5: 
-  switchPublisherNames_6: 
+  switchPublisherNames_6: Lightning Games
   switchPublisherNames_7: 
   switchPublisherNames_8: 
   switchPublisherNames_9: 
   switchPublisherNames_10: 
-  switchPublisherNames_11: 
-  switchPublisherNames_12: 
-  switchPublisherNames_13: 
-  switchPublisherNames_14: 
-  switchPublisherNames_15: 
+  switchPublisherNames_11: Lightning Games
+  switchPublisherNames_12: Lightning Games
+  switchPublisherNames_13: Lightning Games
+  switchPublisherNames_14: Lightning Games
+  switchPublisherNames_15: Lightning Games
   switchIcons_0: {fileID: 0}
-  switchIcons_1: {fileID: 0}
+  switchIcons_1: {fileID: 2800000, guid: 63b6576d90d547245b251a0d0d5e8636, type: 3}
   switchIcons_2: {fileID: 0}
   switchIcons_3: {fileID: 0}
   switchIcons_4: {fileID: 0}
@@ -424,7 +452,7 @@ PlayerSettings:
   switchIcons_14: {fileID: 0}
   switchIcons_15: {fileID: 0}
   switchSmallIcons_0: {fileID: 0}
-  switchSmallIcons_1: {fileID: 0}
+  switchSmallIcons_1: {fileID: 2800000, guid: 63b6576d90d547245b251a0d0d5e8636, type: 3}
   switchSmallIcons_2: {fileID: 0}
   switchSmallIcons_3: {fileID: 0}
   switchSmallIcons_4: {fileID: 0}
@@ -441,37 +469,37 @@ PlayerSettings:
   switchSmallIcons_15: {fileID: 0}
   switchManualHTML: 
   switchAccessibleURLs: 
-  switchLegalInformation: 
+  switchLegalInformation: E:\NS\legal_info_0100846018258000_cba2.zip
   switchMainThreadStackSize: 1048576
   switchPresenceGroupId: 
   switchLogoHandling: 0
   switchReleaseVersion: 0
   switchDisplayVersion: 1.0.0
-  switchStartupUserAccount: 0
-  switchTouchScreenUsage: 0
-  switchSupportedLanguagesMask: 0
+  switchStartupUserAccount: 1
+  switchTouchScreenUsage: 2
+  switchSupportedLanguagesMask: 63565
   switchLogoType: 0
   switchApplicationErrorCodeCategory: 
-  switchUserAccountSaveDataSize: 0
-  switchUserAccountSaveDataJournalSize: 0
+  switchUserAccountSaveDataSize: 52428800
+  switchUserAccountSaveDataJournalSize: 5242880
   switchApplicationAttribute: 0
   switchCardSpecSize: -1
   switchCardSpecClock: -1
-  switchRatingsMask: 0
-  switchRatingsInt_0: 0
-  switchRatingsInt_1: 0
-  switchRatingsInt_2: 0
-  switchRatingsInt_3: 0
-  switchRatingsInt_4: 0
-  switchRatingsInt_5: 0
-  switchRatingsInt_6: 0
-  switchRatingsInt_7: 0
-  switchRatingsInt_8: 0
-  switchRatingsInt_9: 0
-  switchRatingsInt_10: 0
-  switchRatingsInt_11: 0
-  switchRatingsInt_12: 0
-  switchLocalCommunicationIds_0: 
+  switchRatingsMask: -1
+  switchRatingsInt_0: 15
+  switchRatingsInt_1: 15
+  switchRatingsInt_2: 12
+  switchRatingsInt_3: 13
+  switchRatingsInt_4: 12
+  switchRatingsInt_5: 12
+  switchRatingsInt_6: 12
+  switchRatingsInt_7: 12
+  switchRatingsInt_8: 12
+  switchRatingsInt_9: 16
+  switchRatingsInt_10: 12
+  switchRatingsInt_11: 13
+  switchRatingsInt_12: 12
+  switchLocalCommunicationIds_0: 0x0100846018258000
   switchLocalCommunicationIds_1: 
   switchLocalCommunicationIds_2: 
   switchLocalCommunicationIds_3: 
@@ -486,11 +514,11 @@ PlayerSettings:
   switchDataLossConfirmation: 0
   switchUserAccountLockEnabled: 0
   switchSystemResourceMemory: 16777216
-  switchSupportedNpadStyles: 3
+  switchSupportedNpadStyles: 0
   switchNativeFsCacheSize: 32
   switchIsHoldTypeHorizontal: 0
   switchSupportedNpadCount: 8
-  switchSocketConfigEnabled: 0
+  switchSocketConfigEnabled: 1
   switchTcpInitialSendBufferSize: 32
   switchTcpInitialReceiveBufferSize: 64
   switchTcpAutoSendBufferSizeMax: 256
@@ -504,23 +532,53 @@ PlayerSettings:
   switchUseMicroSleepForYield: 1
   switchMicroSleepForYieldTime: 25
   ps4NPAgeRating: 12
-  ps4NPTitleSecret: 
-  ps4NPTrophyPackPath: 
-  ps4ParentalLevel: 11
-  ps4ContentID: ED1633-NPXX51362_00-0000000000000000
+  ps4NPTitleSecret: '0xbd,0x0a,0x1b,0x8a,0xb2,0x24,0x96,0x57,
+
+    0xb3,0xcb,0x49,0xe5,0x18,0xe4,0x50,0x39,
+
+    0x40,0x77,0x28,0xa2,0xb5,0xe7,0xb1,0x93,
+
+    0xca,0xb9,0x52,0x45,0x2b,0xd7,0x27,0x66,
+
+    0x0f,0x70,0xf5,0x9d,0x92,0x9a,0x8d,0x71,
+
+    0xb3,0x44,0x5a,0xfb,0x05,0xe6,0xb6,0xa9,
+
+    0xc0,0x7e,0x4c,0x72,0x82,0x33,0xa9,0xe6,
+
+    0x8e,0x98,0x4a,0x8a,0xe6,0xea,0xbf,0xc2,
+
+    0x64,0xd7,0x16,0x5f,0xcf,0x0f,0x4a,0x57,
+
+    0x11,0xe5,0x0a,0x09,0xd3,0x0f,0x78,0xe5,
+
+    0x61,0xd0,0x85,0x30,0x73,0x7f,0xdf,0x93,
+
+    0x63,0x42,0x82,0x56,0x65,0x79,0xe5,0xe1,
+
+    0xad,0xd9,0xfc,0x87,0xdd,0xb1,0x83,0x7a,
+
+    0x97,0x9d,0xfc,0xae,0x54,0xac,0x1f,0x67,
+
+    0xcf,0x70,0x01,0x6d,0xaf,0xb0,0xcf,0xfc,
+
+    0x2a,0xa0,0x9d,0x71,0xaa,0x81,0x03,0xd5'
+  ps4NPTrophyPackPath: Assets/Editor/SonyNPPS4PublishData/AnnoTrophyPack.trp
+  ps4ParentalLevel: 5
+  ps4ContentID: UP6305-CUSA23852_00-2938904776129856
   ps4Category: 0
   ps4MasterVersion: 01.00
   ps4AppVersion: 01.00
   ps4AppType: 0
-  ps4ParamSfxPath: 
+  ps4ParamSfxPath: Assets/Editor/SonyNPPS4PublishData/param.sfx
   ps4VideoOutPixelFormat: 0
   ps4VideoOutInitialWidth: 1920
   ps4VideoOutBaseModeInitialWidth: 1920
-  ps4VideoOutReprojectionRate: 60
-  ps4PronunciationXMLPath: 
-  ps4PronunciationSIGPath: 
-  ps4BackgroundImagePath: 
-  ps4StartupImagePath: 
+  ps4VideoOutReprojectionRate: 0
+  ps4PronunciationXMLPath: AnnoMutationem/AnnoMutationem.xml
+  ps4PronunciationSIGPath: AnnoMutationem/AnnoMutationem.sig
+  ps4BackgroundImagePath: Assets/AnnoResources/Arts/UIRescources/TRC/TRC_PS4_bg.png
+  ps4StartupImagePath: Assets/AnnoResources/Arts/UIRescources/TRC/TRC_PS4_bg.png
   ps4StartupImagesFolder: 
   ps4IconImagesFolder: 
   ps4SaveDataImagePath: 
@@ -530,7 +588,7 @@ PlayerSettings:
   ps4ShareOverlayImagePath: 
   ps4PrivacyGuardImagePath: 
   ps4ExtraSceSysFile: 
-  ps4NPtitleDatPath: 
+  ps4NPtitleDatPath: Assets/Editor/SonyNPPS4PublishData/CUSA23852_00/nptitle.dat
   ps4RemotePlayKeyAssignment: -1
   ps4RemotePlayKeyMappingDir: 
   ps4PlayTogetherPlayerCount: 0
@@ -539,9 +597,9 @@ PlayerSettings:
   ps4ApplicationParam2: 0
   ps4ApplicationParam3: 0
   ps4ApplicationParam4: 0
-  ps4DownloadDataSize: 0
-  ps4GarlicHeapSize: 2048
-  ps4ProGarlicHeapSize: 2560
+  ps4DownloadDataSize: 1024
+  ps4GarlicHeapSize: 2100
+  ps4ProGarlicHeapSize: 2100
   playerPrefsMaxSize: 32768
   ps4Passcode: frAQBc8Wsa1xVPfvJcrgRYwTiizs2trQ
   ps4pnSessions: 1
@@ -557,23 +615,23 @@ PlayerSettings:
   ps4UseAudio3dBackend: 0
   ps4UseLowGarlicFragmentationMode: 1
   ps4SocialScreenEnabled: 0
-  ps4ScriptOptimizationLevel: 0
+  ps4ScriptOptimizationLevel: 2
   ps4Audio3dVirtualSpeakerCount: 14
-  ps4attribCpuUsage: 0
+  ps4attribCpuUsage: 2
   ps4PatchPkgPath: 
   ps4PatchLatestPkgPath: 
   ps4PatchChangeinfoPath: 
   ps4PatchDayOne: 0
   ps4attribUserManagement: 0
   ps4attribMoveSupport: 0
-  ps4attrib3DSupport: 0
+  ps4attrib3DSupport: 1
   ps4attribShareSupport: 0
   ps4attribExclusiveVR: 0
   ps4disableAutoHideSplash: 0
   ps4videoRecordingFeaturesUsed: 0
   ps4contentSearchFeaturesUsed: 0
-  ps4CompatibilityPS5: 0
-  ps4AllowPS5Detection: 0
+  ps4CompatibilityPS5: 1
+  ps4AllowPS5Detection: 1
   ps4GPU800MHz: 1
   ps4attribEyeToEyeDistanceSettingVR: 0
   ps4IncludedModules:
@@ -588,21 +646,22 @@ PlayerSettings:
   - libSceJobManager.prx
   - libSceNpToolkit2.prx
   - libSceS3DConversion.prx
+  - libSceSmart.prx
   ps4attribVROutputEnabled: 0
-  ps5ParamFilePath: 
+  ps5ParamFilePath: Assets/PS5Plugins/PS5Setting/Editor/param.json
   ps5VideoOutPixelFormat: 0
-  ps5VideoOutInitialWidth: 1920
+  ps5VideoOutInitialWidth: 2560
   ps5VideoOutOutputMode: 1
-  ps5BackgroundImagePath: 
-  ps5StartupImagePath: 
-  ps5Pic2Path: 
+  ps5BackgroundImagePath: Assets/AnnoResources/Arts/UIRescources/TRC/TRC_PS5_bg_0.png
+  ps5StartupImagePath: Assets/AnnoResources/Arts/UIRescources/TRC/TRC_PS5_bg_0.png
+  ps5Pic2Path: Assets/AnnoResources/Arts/UIRescources/TRC/TRC_PS5_Ann.png
   ps5StartupImagesFolder: 
   ps5IconImagesFolder: 
   ps5SaveDataImagePath: 
   ps5SdkOverride: 
   ps5BGMPath: 
   ps5ShareOverlayImagePath: 
-  ps5NPConfigZipPath: 
+  ps5NPConfigZipPath: Assets/PS5Plugins/PS5Setting/Editor/npconfig.zip
   ps5Passcode: frAQBc8Wsa1xVPfvJcrgRYwTiizs2trQ
   ps5UseResolutionFallback: 0
   ps5UseAudio3dBackend: 0
@@ -611,7 +670,14 @@ PlayerSettings:
   ps5UpdateReferencePackage: 
   ps5disableAutoHideSplash: 0
   ps5OperatingSystemCanDisableSplashScreen: 0
-  ps5IncludedModules: []
+  ps5IncludedModules:
+  - libc.prx
+  - libSceFace.prx
+  - libSceFaceTracker.prx
+  - libSceJobManager.prx
+  - libSceJobManager_nosubmission.prx
+  - libSceNpCppWebApi.prx
+  - libScePfs.prx
   ps5SharedBinaryContentLabels: []
   ps5SharedBinarySystemFolders: []
   monoEnv: 
@@ -619,7 +685,7 @@ PlayerSettings:
   splashScreenBackgroundSourcePortrait: {fileID: 0}
   blurSplashScreenBackground: 1
   spritePackerPolicy: 
-  webGLMemorySize: 16
+  webGLMemorySize: 256
   webGLExceptionSupport: 1
   webGLNameFilesAsHashes: 0
   webGLDataCaching: 1
@@ -634,37 +700,47 @@ PlayerSettings:
   webGLThreadsSupport: 0
   webGLWasmStreaming: 0
   scriptingDefineSymbols:
-    1: UNITY_POST_PROCESSING_STACK_V2
-    7: UNITY_POST_PROCESSING_STACK_V2
-    13: UNITY_POST_PROCESSING_STACK_V2
-    14: UNITY_POST_PROCESSING_STACK_V2
-    19: UNITY_POST_PROCESSING_STACK_V2
-    21: UNITY_POST_PROCESSING_STACK_V2
-    25: UNITY_POST_PROCESSING_STACK_V2
-    26: UNITY_POST_PROCESSING_STACK_V2
-    27: UNITY_POST_PROCESSING_STACK_V2
-    28: UNITY_POST_PROCESSING_STACK_V2
+    1: AKER_1_8_OR_NEWER;PLAYMAKER_1_8_5_OR_NEWER;PLAYMAKER_1_9_OR_NEWER;UNITY_POST_PROCESSING_STACK_V2;SAVE_USEIO;CHEAT;ENABLE_LOG;FHY_UP;AMPLIFY_SHADER_EDITOR;CROSS_PLATFORM_INPUTUP;AMPLIFY_SHADER_EDITOR;CROSS_PLATFORM_INPUT
+    4: PLAYMAKER;PLAYMAKER_1_9;PLAYMAKER_1_9_0;PLAYMAKER_1_8_OR_NEWER;PLAYMAKER_1_8_5_OR_NEWER;PLAYMAKER_1_9_OR_NEWER;UNITY_POST_PROCESSING_STACK_V2;CROSS_PLATFORM_INPUT;MOBILE_INPUT
+    7: PLAYMAKER;PLAYMAKER_1_9;PLAYMAKER_1_9_0;PLAYMAKER_1_8_OR_NEWER;PLAYMAKER_1_8_5_OR_NEWER;PLAYMAKER_1_9_OR_NEWER;UNITY_POST_PROCESSING_STACK_V2;CROSS_PLATFORM_INPUT;MOBILE_INPUT
+    13: PLAYMAKER;PLAYMAKER_1_9;PLAYMAKER_1_9_0;PLAYMAKER_1_8_OR_NEWER;PLAYMAKER_1_8_5_OR_NEWER;PLAYMAKER_1_9_OR_NEWER;UNITY_POST_PROCESSING_STACK_V2;CROSS_PLATFORM_INPUT
+    14: PLAYMAKER;PLAYMAKER_1_9;PLAYMAKER_1_9_0;PLAYMAKER_1_8_OR_NEWER;PLAYMAKER_1_8_5_OR_NEWER;PLAYMAKER_1_9_OR_NEWER;UNITY_POST_PROCESSING_STACK_V2;CROSS_PLATFORM_INPUT;MOBILE_INPUT
+    18: PLAYMAKER;PLAYMAKER_1_9;PLAYMAKER_1_9_0;PLAYMAKER_1_8_OR_NEWER;PLAYMAKER_1_8_5_OR_NEWER;PLAYMAKER_1_9_OR_NEWER;UNITY_POST_PROCESSING_STACK_V2
+    19: UNITY_POST_PROCESSING_STACK_V2;SAVE_USEIO;CHEAT;ENABLE_LOG;FHY_UP;CROSS_PLATFORM_INPUT;LOG_RECORD;COPYSAVE
+    21: PLAYMAKER;PLAYMAKER_1_9;PLAYMAKER_1_9_0;PLAYMAKER_1_8_OR_NEWER;PLAYMAKER_1_8_5_OR_NEWER;PLAYMAKER_1_9_OR_NEWER;UNITY_POST_PROCESSING_STACK_V2
+    23: PLAYMAKER;PLAYMAKER_1_9;PLAYMAKER_1_9_0;PLAYMAKER_1_8_OR_NEWER;PLAYMAKER_1_8_5_OR_NEWER;PLAYMAKER_1_9_OR_NEWER;UNITY_POST_PROCESSING_STACK_V2
+    25: PLAYMAKER;PLAYMAKER_1_9;PLAYMAKER_1_9_0;PLAYMAKER_1_8_OR_NEWER;PLAYMAKER_1_8_5_OR_NEWER;PLAYMAKER_1_9_OR_NEWER;UNITY_POST_PROCESSING_STACK_V2
+    26: PLAYMAKER;PLAYMAKER_1_9;PLAYMAKER_1_9_0;PLAYMAKER_1_8_OR_NEWER;PLAYMAKER_1_8_5_OR_NEWER;PLAYMAKER_1_9_OR_NEWER;UNITY_POST_PROCESSING_STACK_V2
+    27: PLAYMAKER;PLAYMAKER_1_9;PLAYMAKER_1_9_0;PLAYMAKER_1_8_OR_NEWER;PLAYMAKER_1_8_5_OR_NEWER;PLAYMAKER_1_9_OR_NEWER;UNITY_POST_PROCESSING_STACK_V2
+    28: UNITY_POST_PROCESSING_STACK_V2;PLAYMAKER;PLAYMAKER_1_9;PLAYMAKER_1_9_0;PLAYMAKER_1_8_OR_NEWER;PLAYMAKER_1_8_5_OR_NEWER;PLAYMAKER_1_9_OR_NEWER
     29: UNITY_POST_PROCESSING_STACK_V2
     30: UNITY_POST_PROCESSING_STACK_V2
     32: UNITY_POST_PROCESSING_STACK_V2
     33: UNITY_POST_PROCESSING_STACK_V2
   platformArchitecture: {}
-  scriptingBackend: {}
-  il2cppCompilerConfiguration: {}
-  managedStrippingLevel: {}
+  scriptingBackend:
+    Standalone: 1
+  il2cppCompilerConfiguration:
+    Nintendo Switch: 2
+    PS4: 1
+    Standalone: 1
+  managedStrippingLevel:
+    Standalone: 1
   incrementalIl2cppBuild: {}
   suppressCommonWarnings: 1
-  allowUnsafeCode: 0
+  allowUnsafeCode: 1
   additionalIl2CppArgs: 
   scriptingRuntimeVersion: 1
-  gcIncremental: 0
-  assemblyVersionValidation: 1
+  gcIncremental: 1
+  assemblyVersionValidation: 0
   gcWBarrierValidation: 0
-  apiCompatibilityLevelPerPlatform: {}
+  apiCompatibilityLevelPerPlatform:
+    Nintendo Switch: 6
+    PS4: 6
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: Template_3D
-  metroPackageVersion: 
+  metroPackageName: Template3D
+  metroPackageVersion: 1.0.0.0
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
@@ -672,7 +748,7 @@ PlayerSettings:
   metroCertificateNotAfter: 0000000000000000
   metroApplicationDescription: Template_3D
   wsaImages: {}
-  metroTileShortName: 
+  metroTileShortName: Anno_Client
   metroTileShowName: 0
   metroMediumTileShowName: 0
   metroLargeTileShowName: 0
@@ -685,8 +761,54 @@ PlayerSettings:
   metroSplashScreenBackgroundColor: {r: 0.12941177, g: 0.17254902, b: 0.21568628,
     a: 1}
   metroSplashScreenUseBackgroundColor: 0
-  platformCapabilities: {}
-  metroTargetDeviceFamilies: {}
+  platformCapabilities:
+    WindowsStoreApps:
+      AllJoyn: False
+      Appointments: False
+      BackgroundMediaPlayback: False
+      BlockedChatMessages: False
+      Bluetooth: False
+      Chat: False
+      CodeGeneration: False
+      Contacts: False
+      EnterpriseAuthentication: False
+      GazeInput: False
+      HumanInterfaceDevice: False
+      InputInjectionBrokered: False
+      InternetClient: False
+      InternetClientServer: False
+      Location: False
+      LowLevelDevices: False
+      Microphone: False
+      MusicLibrary: False
+      Objects3D: False
+      OfflineMapsManagement: False
+      PhoneCall: False
+      PhoneCallHistoryPublic: False
+      PicturesLibrary: False
+      PointOfService: False
+      PrivateNetworkClientServer: False
+      Proximity: False
+      RecordedCallsFolder: False
+      RemoteSystem: False
+      RemovableStorage: False
+      SharedUserCertificates: False
+      SpatialPerception: False
+      SystemManagement: False
+      UserAccountInformation: False
+      UserDataTasks: False
+      UserNotificationListener: False
+      VideosLibrary: False
+      VoipCall: False
+      WebCam: False
+  metroTargetDeviceFamilies:
+    Desktop: False
+    Holographic: False
+    IoT: False
+    IoTHeadless: False
+    Mobile: False
+    Team: False
+    Xbox: False
   metroFTAName: 
   metroFTAFileTypes: []
   metroProtocolName: 
@@ -709,7 +831,7 @@ PlayerSettings:
   XboxOneGameRating: {}
   XboxOneIsContentPackage: 0
   XboxOneEnhancedXboxCompatibilityMode: 0
-  XboxOneEnableGPUVariability: 1
+  XboxOneEnableGPUVariability: 0
   XboxOneSockets: {}
   XboxOneSplashScreen: {fileID: 0}
   XboxOneAllowedProductIds: []
@@ -735,10 +857,10 @@ PlayerSettings:
     m_VersionCode: 1
     m_VersionName: 
   apiCompatibilityLevel: 6
-  cloudProjectId: 
+  cloudProjectId: c3c175bf-c0ea-44c1-ad52-4dcadce3810c
   framebufferDepthMemorylessMode: 0
-  projectName: 
-  organizationId: 
+  projectName: Anno_Client
+  organizationId: saqiulove
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0
