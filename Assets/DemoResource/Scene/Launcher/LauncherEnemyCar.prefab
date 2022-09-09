@@ -219,6 +219,7 @@ GameObject:
   - component: {fileID: 8706187480964105285}
   - component: {fileID: 3315960011012450704}
   - component: {fileID: 3861931751499909312}
+  - component: {fileID: 7140201124939566662}
   m_Layer: 10
   m_Name: LauncherEnemyCar
   m_TagString: EnemyCar
@@ -306,6 +307,20 @@ MonoBehaviour:
   isMuzzle: 1
   toPoint: {fileID: 0}
   cube: {fileID: 139459382598013397}
+--- !u!114 &7140201124939566662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5210863410814313710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea6586060efb439b9da083a39888ccf6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyCarMovement: {fileID: 3861931751499909312}
+  state: 0
 --- !u!1 &8100205972416213277
 GameObject:
   m_ObjectHideFlags: 0

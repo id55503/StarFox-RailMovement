@@ -1,11 +1,9 @@
 ﻿//Create by DongLei
 
-using System;
 using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
 
-namespace GameScript.Scripts.ThinkingStars.Launcher
+namespace ThinkingStars.FlyCar
 {
     public class EnemyCarManager : MonoBehaviour
     {

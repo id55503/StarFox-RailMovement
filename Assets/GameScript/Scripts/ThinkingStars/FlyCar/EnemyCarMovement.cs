@@ -1,10 +1,9 @@
 ﻿using System;
 using Cinemachine;
-using DG.Tweening;
 using UnityEditor;
 using UnityEngine;
 
-namespace GameScript.Scripts.ThinkingStars.Launcher
+namespace ThinkingStars.FlyCar
 {
     public class EnemyCarMovement : MonoBehaviour
     {

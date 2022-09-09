@@ -1,9 +1,8 @@
 ﻿//Create by DongLei
 
-using System;
 using UnityEngine;
 
-namespace GameScript.Scripts.ThinkingStars.Artillery
+namespace ThinkingStars.Artillery
 {
     public class GameSmartMissile : SmartMissile<Rigidbody, Vector3>
     {

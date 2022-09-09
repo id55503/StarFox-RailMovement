@@ -3,7 +3,7 @@
 using System;
 using UnityEngine;
 
-namespace GameScript.Scripts.ThinkingStars.Artillery.Interface
+namespace ThinkingStars.Artillery.Interface
 {
     public class GameLaserBeam : MonoBehaviour
     {

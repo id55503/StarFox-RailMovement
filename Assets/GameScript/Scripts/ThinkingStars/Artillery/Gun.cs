@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using GameScript.Scripts.ThinkingStars.Artillery.Interface;
+﻿using ThinkingStars.Artillery.Interface;
 using UnityEngine;
 
-namespace GameScript.Scripts.ThinkingStars.Artillery
+namespace ThinkingStars.Artillery
 {
     public class Gun : MonoBehaviour
     {

@@ -1,7 +1,6 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace GameScript.Scripts.ThinkingStars.Launcher
+namespace ThinkingStars.FlyCar
 {
     public class MovementArea : MonoBehaviour
     {

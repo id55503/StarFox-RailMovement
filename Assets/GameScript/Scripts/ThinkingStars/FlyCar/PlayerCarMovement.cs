@@ -1,8 +1,7 @@
-﻿using System;
-using Cinemachine;
+﻿using Cinemachine;
 using UnityEngine;
 
-namespace GameScript.Scripts.ThinkingStars.Launcher
+namespace ThinkingStars.FlyCar
 {
     public class PlayerCarMovement : MonoBehaviour
     {

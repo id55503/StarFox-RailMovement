@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace GameScript.Scripts.ThinkingStars.Artillery.Interface
+namespace ThinkingStars.Artillery.Interface
 {
     public class GameBullet : MonoBehaviour
     {

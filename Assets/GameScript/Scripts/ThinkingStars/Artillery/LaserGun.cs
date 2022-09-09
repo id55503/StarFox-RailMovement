@@ -1,12 +1,11 @@
 ﻿//Create by DongLei
 
-using System;
 using System.Collections.Generic;
 using DG.Tweening;
-using GameScript.Scripts.ThinkingStars.Artillery.Interface;
+using ThinkingStars.Artillery.Interface;
 using UnityEngine;
 
-namespace GameScript.Scripts.ThinkingStars.Artillery
+namespace ThinkingStars.Artillery
 {
     public class LaserGun : MonoBehaviour
     {
