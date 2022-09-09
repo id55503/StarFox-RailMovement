@@ -28,7 +28,8 @@ Transform:
   m_LocalRotation: {x: 0.000000059604645, y: 0, z: -0, w: 1}
   m_LocalPosition: {x: -0.0036694335, y: 0.43332756, z: 0.68640804}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 2178083318313940477}
   m_Father: {fileID: 8494310513571054033}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -79,6 +80,54 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!1 &4840755590272476258
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6882961450208442946}
+  - component: {fileID: 741960819552965556}
+  m_Layer: 0
+  m_Name: GunLaser
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &6882961450208442946
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4840755590272476258}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 2.16}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8494310513571054033}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &741960819552965556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4840755590272476258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58d17378400143d088e37c0efa46ba79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameLaserBeam: {fileID: 3516156619480017409, guid: 2155b649fe91aac4c85d714513092005,
+    type: 3}
+  laserLength: 50
+  flowDuration: 5
+  target: {fileID: 0}
 --- !u!1 &5210863410814313710
 GameObject:
   m_ObjectHideFlags: 0
@@ -94,7 +143,7 @@ GameObject:
   - component: {fileID: 551317554694739060}
   m_Layer: 10
   m_Name: LauncherPlayerCar
-  m_TagString: Untagged
+  m_TagString: PlayerCar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -122,7 +171,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5210863410814313710}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 2.3763084, y: 1.0983429, z: 4.650249}
@@ -152,7 +201,7 @@ SphereCollider:
   m_GameObject: {fileID: 5210863410814313710}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 2.5
   m_Center: {x: 0, y: 0, z: 0}
@@ -170,7 +219,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   carModel: {fileID: 8494310513571054033}
   speedHV: 6
-  speedForward: 12
+  speedForward: 0
   speedLookAt: 0
   horizontalRotationLimit: 40
   aimTarget: {fileID: 0}
@@ -178,6 +227,50 @@ MonoBehaviour:
   maxReboundDuration: 0.1
   reboundVelocityFacter: 2
   collider: {fileID: 3315960011012450704}
+--- !u!1 &7193059008169979804
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2178083318313940477}
+  - component: {fileID: 5534949164228577800}
+  m_Layer: 24
+  m_Name: Cube
+  m_TagString: PlayerCar
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2178083318313940477
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7193059008169979804}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.55, y: -0.49, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1530436031479313429}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &5534949164228577800
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7193059008169979804}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.0524063, y: 1.1595049, z: 4.201709}
+  m_Center: {x: 0.52620304, y: 0.079752445, z: -0.68637085}
 --- !u!1 &8100205972416213277
 GameObject:
   m_ObjectHideFlags: 0
@@ -212,6 +305,7 @@ Transform:
   - {fileID: 913403348510116239}
   - {fileID: 2535609824169042974}
   - {fileID: 7652443316348135837}
+  - {fileID: 6882961450208442946}
   m_Father: {fileID: 1483094661950187653}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -333,12 +427,17 @@ PrefabInstance:
         type: 3}
       propertyPath: bulletPrefab
       value: 
-      objectReference: {fileID: 801304018557248562, guid: 2155b649fe91aac4c85d714513092005,
+      objectReference: {fileID: 801304018557248562, guid: 70e2d2a112883c14787c399891a6c8a6,
         type: 3}
     - target: {fileID: 7822947435805368042, guid: 5b99d5fd1c2342f4aa6e8adc4867a7a3,
         type: 3}
       propertyPath: m_Name
       value: GunBulletBlueLeft
+      objectReference: {fileID: 0}
+    - target: {fileID: 7822947435805368042, guid: 5b99d5fd1c2342f4aa6e8adc4867a7a3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b99d5fd1c2342f4aa6e8adc4867a7a3, type: 3}
@@ -414,6 +513,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GunMissileBlueRight
+      objectReference: {fileID: 0}
+    - target: {fileID: 7822947435805368042, guid: 5b99d5fd1c2342f4aa6e8adc4867a7a3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b99d5fd1c2342f4aa6e8adc4867a7a3, type: 3}
@@ -494,12 +598,17 @@ PrefabInstance:
         type: 3}
       propertyPath: bulletPrefab
       value: 
-      objectReference: {fileID: 801304018557248562, guid: 2155b649fe91aac4c85d714513092005,
+      objectReference: {fileID: 801304018557248562, guid: 70e2d2a112883c14787c399891a6c8a6,
         type: 3}
     - target: {fileID: 7822947435805368042, guid: 5b99d5fd1c2342f4aa6e8adc4867a7a3,
         type: 3}
       propertyPath: m_Name
       value: GunBulletBlueRight
+      objectReference: {fileID: 0}
+    - target: {fileID: 7822947435805368042, guid: 5b99d5fd1c2342f4aa6e8adc4867a7a3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b99d5fd1c2342f4aa6e8adc4867a7a3, type: 3}
@@ -575,6 +684,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GunMissileBlueLeft
+      objectReference: {fileID: 0}
+    - target: {fileID: 7822947435805368042, guid: 5b99d5fd1c2342f4aa6e8adc4867a7a3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b99d5fd1c2342f4aa6e8adc4867a7a3, type: 3}

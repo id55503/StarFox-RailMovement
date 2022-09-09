@@ -23,11 +23,11 @@ namespace GameScript.Scripts.ThinkingStars.Artillery
             if (target != null)
             {
                 transform.DOLookAt(target.transform.position, flowDuration);
-                foreach (var laserBeam in _gameLaserBeams)
-                {
-                    laserBeam.ShootBeamInDir(transform.position,
-                        transform.position + transform.forward * laserLength);
-                }
+            }
+            foreach (var laserBeam in _gameLaserBeams)
+            {
+                laserBeam.ShootBeamInDir(transform.position,
+                    transform.position + transform.forward * laserLength);
             }
         }
 

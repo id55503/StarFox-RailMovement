@@ -11,8 +11,12 @@ namespace GameScript.Scripts.ThinkingStars.Artillery
         public GameObject impactParticle;
         public GameObject projectileParticle;
         public GameObject muzzleParticle;
-        
-        
+
+        public void SetTargetTag(string targetTag)
+        {
+            TargetTag = targetTag;
+        }
+
         void Awake()
         {
             m_rigidbody = GetComponent<Rigidbody>();
@@ -27,8 +31,13 @@ namespace GameScript.Scripts.ThinkingStars.Artillery
 
         private void OnCollisionEnter(Collision collision)
         {
-            impactParticle = Instantiate(impactParticle, transform.position, Quaternion.FromToRotation(Vector3.up, Vector3.up)) as GameObject;
-            projectileParticle.SetActive(false);
+            if (collision.gameObject.CompareTag(TargetTag))
+            {
+                impactParticle = Instantiate(impactParticle, transform.position,
+                    Quaternion.FromToRotation(Vector3.up, Vector3.up));
+                projectileParticle.SetActive(false);
+                Destroy(impactParticle.gameObject, 5);
+            }
         }
 
         protected override Transform findNewTarget()

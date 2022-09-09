@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   smartMissile: {fileID: 2293576130053526701}
   initSpeed: 100
-  owner: {fileID: 0}
+  owner: {fileID: 801304018557248563}
   lifeTime: 20
 --- !u!1 &4052049684717946528
 GameObject:

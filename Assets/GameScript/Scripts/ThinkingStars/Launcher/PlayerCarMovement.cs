@@ -19,7 +19,7 @@ namespace GameScript.Scripts.ThinkingStars.Launcher
             speedForward = dollyCartSpeed;
             cinemachineDollyCart.m_Speed = dollyCartSpeed;
         }
-
+        
         private void Start()
         {
             SetSpeed(speedForward);
@@ -31,7 +31,7 @@ namespace GameScript.Scripts.ThinkingStars.Launcher
             float v = Input.GetAxis("Vertical");
             ProcessCollision(ref h, ref v);
             LocalMove(h, v);
-            RotationLook(h, v);
+            // RotationLook(h, v);
             HorizontalRotation(carModel, h, horizontalRotationLimit, 0.1f);
         }
 

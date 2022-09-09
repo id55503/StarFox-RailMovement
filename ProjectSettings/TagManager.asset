@@ -49,6 +49,8 @@ TagManager:
   - MultiSpineAnimation
   - Shield
   - Bullet
+  - PlayerCar
+  - EnemyCar
   layers:
   - Default
   - TransparentFX

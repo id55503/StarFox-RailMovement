@@ -22,7 +22,7 @@ namespace GameScript.Scripts.ThinkingStars.Artillery
             // projectile.transform.localPosition = Vector3.zero;
             projectile.initSpeed = initSpeed;
             projectile.lifeTime = lifeTime;
-            projectile.Fire();
+            projectile.Fire(owner);
             fireTimeCount = 0;
         }
 
