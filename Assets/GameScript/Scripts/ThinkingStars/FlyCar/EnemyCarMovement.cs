@@ -21,14 +21,8 @@ namespace ThinkingStars.FlyCar
         private MovementArea _movementArea;
         private float _targetDistance;
 
-        public Action<EnemyCarMovement> onDead;
-
-
-        private void Start()
-        {
-            EnemyCarManager.RegisterEnemyCar(this);
-        }
-
+        public Func<bool> onMoveToPointArrived;
+       
         private void Update()
         {
             if (isMuzzle)
@@ -46,12 +40,12 @@ namespace ThinkingStars.FlyCar
                 var target = FindNewTarget();
                 // Debug.Log(target);
             }
-            else
+            else if(toPoint != null)
             {
                 var playerLocal = toPoint.localPosition - transform.localPosition;
                 if (playerLocal.magnitude < 0.05)
                 {
-                    HorizontalRotation(carModel, 0, horizontalRotationLimit, 0.1f);
+                    onMoveToPointArrived?.Invoke();
                     return;
                 }
                 playerLocal = playerLocal.normalized;
@@ -61,11 +55,10 @@ namespace ThinkingStars.FlyCar
 
                 // transform.localPosition = originPoint.localPosition;
             }
-        }
-
-        private void OnDisable()
-        {
-            onDead?.Invoke(this);
+            else
+            {
+                HorizontalRotation(carModel, 0, horizontalRotationLimit, 0.1f);
+            }
         }
 
 

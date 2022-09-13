@@ -44,7 +44,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Emission:
-        m_Texture: {fileID: 2800000, guid: 1a90c717df28c57459f2276c4c362163, type: 3}
+        m_Texture: {fileID: 2800000, guid: 856fcd669210aad4eb60e126379b1572, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
@@ -95,6 +95,6 @@ Material:
     - _ZWrite: 1
     - __dirty: 0
     m_Colors:
-    - _Color: {r: 2.4588165, g: 19.202187, b: 22.363522, a: 1}
+    - _Color: {r: 0.32941177, g: 2.572549, b: 2.9960785, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Vector0: {r: 0.03, g: 0, b: 0, a: 0}

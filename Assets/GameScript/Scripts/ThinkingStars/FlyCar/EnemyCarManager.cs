@@ -8,7 +8,7 @@ namespace ThinkingStars.FlyCar
     public class EnemyCarManager : MonoBehaviour
     {
         private static EnemyCarManager instance;
-        private List<EnemyCarMovement> _enemyCarMovements = new List<EnemyCarMovement>();
+        private List<EnemyCar> _enemyCars = new List<EnemyCar>();
 
         private void Awake()
         {
@@ -20,17 +20,20 @@ namespace ThinkingStars.FlyCar
             instance = this;
         }
 
-        public static void RegisterEnemyCar(EnemyCarMovement enemyCarMovement)
+        public static void RegisterEnemyCar(EnemyCar enemyCar)
         {
-            instance._enemyCarMovements.Add(enemyCarMovement);
-            enemyCarMovement.onDead = UnRegisterEnemyCar;
+            instance._enemyCars.Add(enemyCar);
+            enemyCar.onDead = UnRegisterEnemyCar;
         }
 
-        private static void UnRegisterEnemyCar(EnemyCarMovement enemyCarMovement)
+        private static void UnRegisterEnemyCar(EnemyCar enemyCar)
         {
-            instance._enemyCarMovements.Remove(enemyCarMovement);
+            instance._enemyCars.Remove(enemyCar);
         }
-        
+
+        public static List<EnemyCar> GetAllEnemyCars()
+        {
+            return instance._enemyCars;
+        }
     }
-    
 }
